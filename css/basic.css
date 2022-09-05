@@ -1,0 +1,378 @@
+@charset "UTF-8"; /* 한글 깨지지않기위해 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*마우스 커서*/
+
+html, body { cursor: url('../img/cursor.cur'), auto;} 
+a, a:link { cursor: url('../img/cursor.cur'), auto;} 
+a:hover, a:focus { cursor: url('../img/cursor.cur'), auto;} 
+a:active {cursor: url('../img/cursor.cur'), auto;} 
+
+
+body {    
+    font-family: Tahoma, "맑은 고딕", Verdana, Geneva, sans-serif;
+}
+.header_top, .header_title, .s1 ,.s3_cont , .s4 , .footer_in, .s5 { 
+    max-width: 1200px; /*1200보다 작을때는 100프로 클때는 1200*/
+    margin:0 auto;   
+
+}
+header { 
+    height: 500px;
+    background-color: #000;
+    background: url('../img/store_1.jpg');
+    /* opacity: 0.9; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px 0;
+}
+
+.top_logo {}
+.top_logo a {
+    font-family: 'Sriracha', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.top_menu {}
+.top_menu ul {}
+.top_menu ul li {
+    float: left;
+    margin-left: 25px;    
+}
+.top_menu ul li a {
+    font-weight: 900;
+    color: #fff;
+}
+
+.top_menu a {
+    font-size: 14px;
+}
+
+.header_title {
+    color: #fff;
+    /* text-align: center;  단순하게 가운데 배치할시 */
+    padding-top :130px;
+    
+}
+
+
+.header_title h1 {
+    font-family: 'Sriracha', cursive;
+    font-size: 50px;
+}
+.header_title p {}
+
+/* nav */
+
+.gnb {
+    height: 50px;
+    background: #FAF3EB;
+    text-align: center;
+}
+.gnb > div {}
+.gnb ul {
+    display:inline-block;
+    overflow: hidden;
+    
+}
+.gnb ul li { 
+    float: left;
+}
+.gnb li a {
+    display: inline-block;
+    margin:0 20px;
+    line-height: 50px;
+    color: #000;
+    transition: 0.4s;
+}
+
+li.active a,.gnb li:hover a {   /*active라는 클래스를 가진 li의 a태그 선택*/
+    color: rgb(216, 61, 34);           /*li.active a 와 li에 hover 글자색 변경 한번에 css줌 */
+}
+li.active a:after,.gnb li:hover a:after { /*active라는 클래스를 가진 li의 a태그 밑에 막대기*/
+    display: block;                       /* li.active a와 li 밑에 막대기 한번에 css줌 */
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #f83f3f;
+    margin-top: -5px; /*막대기높이만큼 빼준다*/
+}
+
+/* content */
+
+section {}
+.s1 {
+    display: flex;
+    margin:110px auto;
+
+}
+.s1 > div {
+    flex: 1; /* 비율이 1:1:1:1이다(width:25%로도 대체가능)*/
+    text-align: center;
+
+}
+.s1_text {
+    padding-top: 10px;
+}
+.s1_text strong {}
+.s1_text span {
+    font-size: 14px;
+    color: #585858;
+}
+
+.s2 {
+    background: url(../img/pattern.png);
+    padding:40px;
+}
+.s2 > div { 
+    text-align: center;}
+.s2_icons {
+    display: inline-block;
+}
+.s2_icons li {
+    display: inline-block;
+    margin: 0 20px;
+}
+.s2_icons a {
+    display: block;
+}
+.s2_icons a img {
+    width: 70px;
+}
+.s2_icons a p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.s3 {
+    margin:110px auto;    
+}
+.s3_title {
+
+    text-align: center;
+    margin-bottom: 50px;
+}
+.s3_title p {
+    font-size: 14px;
+    color: #585858;
+}
+.s3_title h3 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.s3_title h3:after {
+    display:block;                   
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -50px; /* transform:translate(-50%)와 같은 효과*/
+    width: 145px;
+    height: 5px;
+    background: #f83f3f;
+    margin-top: 0px; 
+}
+
+.s3_cont {
+    padding:0 10px;
+    display: flex;
+}
+
+.s3_cont > div {}
+
+.s3_cont > div:nth-child(2) {
+    margin: 0 20px;
+}
+.s3_cont > div:nth-child(2) img:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.s3_cont > div img {
+    transition: 0.4s;
+}
+
+.s3_cont > div img:hover {
+    transform: scale(1.2);
+    border-radius: 10%;
+}
+.s3_cont > div:last-child {
+    height: 200px;
+    padding: 60px 0 0 30px;
+}
+
+.s3_cont > div:last-child h4 {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.s3_cont > div:last-child p {
+    margin:30px 0 40px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.s3_cont > div:last-child a.more {
+    color: #f83f3f;
+    font-weight: 550;
+
+}
+
+
+.sns {
+    margin-top: 20px;
+}
+.sns a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #999;    
+    text-align: center;
+    margin-right: 5px;
+    
+}
+.sns i {
+    color: #fff;
+    line-height: 30px;
+}
+
+
+.s4 {
+    margin-bottom: 150px;   
+    
+}
+.s4 h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.s4 h3:after {
+    display:block;                   
+    content: "";   
+    width: 80px;
+    height: 5px;
+    background: #f83f3f;
+    margin-top: 10px; 
+}
+
+.s4 ul {  
+    overflow: hidden;
+}
+.s4 li { 
+    float: left;
+    padding:0 10px;
+}
+.s4 img {
+    width: 180px;  
+    height: 180px;
+}
+
+.s4 .slide_in {
+    width: 1200px;
+    
+}
+.s4 .slide_in div {
+    transition: all 0.5s;
+}
+/*추가 5영역 */
+
+.s5{
+    background: #FAF3EB;
+    border-radius: 15px;
+    margin-top: 150px ;
+    margin-bottom: 170px ;
+    height: 500px;
+}
+.s5 img {
+    margin: 50px 50px;
+    width: 500px;
+    height: 400px;
+    
+}
+.s5_wrap {
+    display: flex;
+}
+.s5_wrap h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.s5_wrap .hp_wrap {
+    margin-top: 100px;
+    margin-right: 70px;
+}
+
+.s5_wrap .hp_wrap p:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 550;    
+    margin-top: 50px; 
+}  
+
+
+.s5_wrap .hp_wrap p:nth-of-type(2):hover {
+    animation-name: enroll;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+}
+
+
+@keyframes enroll {
+    0% {
+        transform:translateX(0);
+    }   
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+
+
+footer {
+    height: 150px;
+    background: #999;
+
+}
+.footer_in {
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer h4 {
+    font-family: 'Sriracha', cursive;
+    font-size: 30px;
+    margin-top: 30px;
+    
+}
+footer p {
+    text-align: right;
+    color: #fff;
+    margin-top: 50px;
+}
+footer .address {
+    display: block;
+    color: #fff;
+    opacity: 0.4;
+    font-size: 14px;
+    
+}
+
+/* s4 slick */
+.s4 .slick-next {
+    right: -8px;
+}
+.s4 .slick-prev::before {
+    color: black;
+}
+
+.s4 .slick-next::before {
+    color: black;
+
+}
